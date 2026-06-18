@@ -4,10 +4,10 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: rgba(1, 22, 54, 0.85);
+    color: #e0f0ff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 15px 3%;
+    padding: 20px 5%;           /* Centraliza com margens laterais */
     min-width: 200px;
     line-height: 1.5;
 }
@@ -18,7 +18,7 @@ div {
 }
 
 /*---------- Neon nas Bordas ----------*/
-#esquerda1, #Centro {
+#esquerda1, #Centro, #Centro2 {
     border: 2px solid #00f0ff;
     box-shadow: 
         0 0 8px #00f0ff,
@@ -34,143 +34,100 @@ div {
         0 0 40px rgba(255, 0, 204, 0.6);
 }
 
-#contato {
-    border: 3px solid #00f0ff;
-    box-shadow: 
-}
-
-/* ==================== LAYOUT DESKTOP ==================== */
-#esquerda1 {
+/* ==================== LAYOUT DESKTOP - Centralizado ==================== */
+#Centro2, #Centro, #esquerda1, #direita {
     float: left;
     background-color: rgba(1, 35, 90, 0.85);
-    max-width: 23%;
-    text-align: center;
-    border-radius: 12px;
-    padding: 12px;
-}
-
-#Centro {
-    float: left;
-    max-width: 50%;
-    background-color: rgba(1, 35, 90, 0.85);
-    text-align: center;
     border-radius: 12px;
     padding: 15px;
 }
 
+/* Logo no topo */
 #Centro2 {
-    float: left;
-    max-width: 100%;
+    width: 100%;
     text-align: center;
-    border-radius: 12px;
-    padding: 15px;
+    margin-bottom: 15px;
 }
 
 #Centro2 img {
-    width: 50%;
-    max-width: auto;
+    width: 45%;
+    max-width: 380px;
     transition: transform 0.3s;
     border-radius: 12px;
+}
 
+/* Colunas principais */
+#esquerda1 {
+    width: 22%;
+    max-width: 280px;
+    text-align: center;
+}
+
+#Centro {
+    width: 48%;
+    max-width: 620px;
+    text-align: center;
+    margin: 0 1.5%;
 }
 
 #direita {
-    float: left;
-    background-color: rgba(36, 36, 36, 0.95);
-    max-width: 18%;
+    width: 22%;
+    max-width: 260px;
     text-align: center;
-    border-radius: 12px;
-    padding: 12px;
 }
 
-/* ==================== CELULAR - CARROSSEL ==================== */
+/* ==================== CELULAR ==================== */
 @media (max-width: 992px) {
-    #esquerda1, #Centro, #direita {
+    #Centro2, #Centro, #esquerda1, #direita {
         float: none;
+        width: 100%;
         max-width: 100%;
         margin: 12px auto;
     }
 
     #Centro2 { order: 1; }
-    #Centro { order: 2; }
+    #Centro  { order: 2; }
     #esquerda1 { order: 3; }
-    #direita { order: 34; }
+    #direita { order: 4; }
 
-    /* Título fixo em cima */
-    #esquerda1 h2 {
-        position: relative;
-        z-index: 2;
-        margin-bottom: 12px;
-        padding-bottom: 8px;
-        border-bottom: 2px solid #00f0ff;
+    #Centro2 img {
+        width: 70%;
     }
+}
 
-    /* Carrossel horizontal */
+/* Carrossel Membros */
+@media (max-width: 992px) {
     #Membros {
         display: flex;
         overflow-x: auto;
         gap: 18px;
-        padding: 8px 10px 12px;
+        padding: 10px 5px;
         scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
     }
 
-    /* Esconde as hr antigas */
-    }#esquerda1 hr {
-        border: none;
-        height: 2px;
-        background: linear-gradient(to right, transparent, #105CC3, transparent);
-        margin: 10px 0;
-    }
-
-
-    /* Cada item do carrossel */
     #Membros iframe {
-        min-width: 265px;
+        min-width: 260px;
         flex-shrink: 0;
-    }
-
-    #Membros p {
-        margin: 6px 0 4px;
-    }
-
-/* Ajustes para telas menores */
-@media (max-width: 600px) {
-    #Membros iframe {
-        min-width: 245px;
-    }
-
-    body {
-        padding: 10px 5%;
     }
 }
 
 /* ==================== ESTILOS GERAIS ==================== */
 #esquerda1 h2 {
     color: #4cc9ff;
-    margin: 8px 0;
+    margin: 8px 0 12px 0;
     font-size: 1.35rem;
     text-shadow: 0 0 8px rgba(16, 92, 195, 0.6);
 }
 
-#Centro #imgmascara img {
-    width: 65%;
-    max-width: auto;
-    transition: transform 0.3s;
+/* Trailer dentro do Centro */
+#Centro iframe {
+    width: 100%;
+    max-width: 100%;
     border-radius: 12px;
+    margin: 12px 0;
 }
 
-#Centro #logo img:hover {
-    transform: scale(1.08);
-}
-
-#Centro #redes_sociais img {
-    width: 52px;
-    margin: 8px;
-    transition: transform 0.3s;
-}
-
+/* Outros estilos */
 #botaodc img {
     width: 85%;
     max-width: 320px;
@@ -178,28 +135,20 @@ div {
     transition: all 0.3s;
 }
 
-#livepix img {
-    width: 58%;
-    max-width: 220px;
-    border-radius: 12px;
-    float: left;
-    margin-right: 15px;
-    margin-bottom: 10px;
-}
-
 #contato {
+    background: rgba(0, 0, 0, 0.9);
     color: #ffdddd;
+    border: 3px solid #ff3366;
     border-radius: 10px;
     padding: 12px;
-    margin-top: 25px;
+    margin-top: 20px;
     transition: all 0.4s;
 }
 
 #contato:hover {
-    border-color: #ffffff;
+    border-color: white;
     color: white;
     background: rgba(20, 20, 20, 0.95);
 }
 
 a { text-decoration: none; }
-iframe { border-radius: 8px; }
