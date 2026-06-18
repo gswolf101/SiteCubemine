@@ -4,7 +4,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: #e0f0ff;
+    color: rgba(1, 22, 54, 0.85);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 15px 3%;
