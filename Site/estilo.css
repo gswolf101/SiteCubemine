@@ -1,6 +1,6 @@
 /*---------- Corpo ----------*/  
 body {
-    background-image: url(imagens/fundo.png);
+    background-image: url(imagens/fundo.png );
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
